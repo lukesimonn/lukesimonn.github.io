@@ -1,10 +1,24 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
+    "objectID": "hof.html",
+    "href": "hof.html",
+    "title": "Wikipedia HOF",
     "section": "",
-    "text": "Its a secret for now…"
+    "text": "I am a self-professed wikipiedia lover and in my time reading and editing the site I have come across some great pages for rabbithole deep dives. The Wikipedia Hall of Fame will look to highlight some of these lovely corners of the internet."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Luke Simon",
+    "section": "",
+    "text": "This is my home page! There isn’t anything on here yet but there will be soon!"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume/CV",
+    "section": "",
+    "text": "Looks like I need to write a new resume…"
   },
   {
     "objectID": "projects.html",
@@ -14,10 +28,10 @@
     "text": "Sometime soon there will be a blog here about all the lovely research and projects I work on (Shout out Dirt Divas!!)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Luke Simon",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
     "section": "",
-    "text": "This is my home page! There isn’t anything on here yet but there will be soon!"
+    "text": "Its a secret for now…"
   }
 ]
