@@ -4,7 +4,14 @@
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "About this site"
+    "text": "Its a secret for now…"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Sometime soon there will be a blog here about all the lovely research and projects I work on (Shout out Dirt Divas!!)"
   },
   {
     "objectID": "index.html",
