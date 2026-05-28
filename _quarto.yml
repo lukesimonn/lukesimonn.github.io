@@ -8,10 +8,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - projects.qmd
-      - hof.qmd
-      - resume.qmd
+      - href: about.qmd
+        text: About Me
+      - href: projects.qmd
+        text: Projects
+      - href: hof.qmd
+        text: Wikipedia HOF
+      - href: resume.qmd
+        text: Resume/CV
 
 format:
   html:
