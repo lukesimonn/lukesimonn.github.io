@@ -1,7 +1,5 @@
 ---
-title: "lukesimonn.github.io"
+title: "Luke Simon"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This is my home page! There isn't anything on here yet but there will be soon!
