@@ -12,7 +12,7 @@ about:
       href: https://github.com/lukesimonn
     - icon: linkedin
       text: LinkedIn
-      href: www.linkedin.com/in/luke-simon-81799340b
+      href: https://www.linkedin.com/in/luke-simon-81799340b
     - icon: envelope
       text: lukesimon@ucsb.edu
       href: mailto:lukesimon@ucsb.edu 
