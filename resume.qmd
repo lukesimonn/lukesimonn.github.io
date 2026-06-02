@@ -2,4 +2,6 @@
 title: "Resume/CV"
 ---
 
-Looks like I need to write a new resume...
+<iframe src="LS-Resume-Ju26.pdf" width="100%" height="600px">
+
+</iframe>
