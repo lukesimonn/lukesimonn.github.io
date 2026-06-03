@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "EEMB URS Poster 2026"
 description: Poster discussing rock derived nutrients effect on leaf-level availability
 format: html
 author:

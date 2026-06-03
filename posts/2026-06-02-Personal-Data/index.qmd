@@ -1,0 +1,164 @@
+---
+title: "Personal Data Figures"
+description: Figures from personal data collected on daily walk times.
+author: 
+  - name: Luke Simon
+    url: https://lukesimonn.github.io
+date: 2026-06-02
+image: Walking-Photo.jpg
+draft: false
+execute:
+  message: false
+  warning: false
+---
+This is some annotated code creating figures from personal data I collected this quarter. The question I was trying to answer was whether or not daily departure time effected my total walk time to my 8 am classes. There are two plots, with the necessary annotated code, and figure captions at the bottom. Feel free to look through the associated csv file located [here]().
+
+```{r}
+#| label: setup
+
+# read in packages
+library(tidyverse)
+library(janitor)
+library(patchwork)
+library(ggeffects)
+
+
+
+# creating new data frame with personal data
+personal_data <- read_csv("personal-datasheet.csv") |> 
+  # standardizing column names
+  clean_names() |> 
+  # dropping rows with na observations
+  drop_na() |> 
+  # changing the stop column to display TRUE/FALSE instead of 1/0
+  mutate(stop = as.logical(stop))
+
+# creating new data frame for model predictions
+personal_num <- personal_data |> 
+  # changing depature time column to numeric value
+  mutate(departure_time = as.numeric(departure_time)) |> 
+  # selecting needed columns for model
+  select(departure_time, walk_minutes)
+```
+
+### Categorical vs Response
+
+The categorical variable used in this example is location, split between the two buildings my classes were in. The response is total walk time. This figure was created in order to ensure that walk times were consistent between locations.
+
+```{r}
+#| label: categorical-response
+
+# base layer: gg plot
+ggplot(data = personal_data, # pulling from personal data frame
+       aes(x = location, # x-axis
+           y = walk_minutes, # y-axis
+           color = location)) + # coloring by location
+  # first layer: box plot
+  geom_boxplot(color = "grey30", # changing box plot outline color
+               linewidth = 0.5,) + # making border lines thicker
+  # second layer: jitter plot
+  geom_jitter(height = 0, # removing vertical jitter
+              width = 0.1, # slight horizontal jitter
+              alpha = 0.9, # making points slightly opaque
+              size = 2) + # making point size larger
+  # changing theme
+  theme_bw() +
+  # removing legend
+  theme(legend.position = "none",
+        panel.grid = element_blank()) +
+  # labeling x- & y-axes and adding title
+  labs(x = "Location",
+       y = "Walk time (minutes)",
+       title = "Box plots of total walk time separated by location",
+       subtitle = "Most recent observation 2026-05-26") +
+  # changing colors based on location
+  scale_color_manual(values = c("Campbell" = "aquamarine3",
+                                "387" = "orange"))
+```
+
+### Predictor vs Reponse
+
+The predictor variable for this figure is departure time, the response is walk time. To create this figure, and to ensure there is a linear relationship between the variables, we first need to fit a model. The code for fitting the model is listed first, with the subsequent figure below.
+
+#### Model Fitting
+
+```{r}
+#| label: linear-modeling
+#| fig-height: 6
+#| fig-width: 6
+
+personalmodel <- lm(
+  walk_minutes ~ departure_time,
+  data = personal_num
+)
+par(mfrow = c(2,2))
+plot(personalmodel)
+```
+
+- residuals normally distributed (QQ)
+- residuals are homoscedastic (Residuals vs fitted/scale-location)
+- no outliers influencing model coeff estimates (leverage)
+
+```{r}
+#| label: model-summary
+
+summary(personalmodel)
+```
+
+```{r}
+#| label: model-predictions
+
+# creating new object for predictions
+preds <- ggpredict(
+  personalmodel, # model object
+  terms = "departure_time" # predictor 
+)
+
+# displaying prediction
+preds
+```
+
+#### Figure
+
+```{r}
+
+# base layer: ggplot
+ggplot(data = personal_data,
+       aes(x = departure_time, # x-axis
+           y = walk_minutes, # y-axis
+           color = location, # coloring by location
+           shape = stop)) + # changing shape based on stops
+  # first layer: points
+  geom_point(size = 2) + # making points larger
+  # second layer: ribbon representing confidence interval
+  geom_ribbon(data = preds,
+              aes(x = x,
+                  y = predicted,
+                  ymin = conf.low,
+                  ymax = conf.high),
+              alpha = 0.1,
+              inherit.aes = FALSE) + 
+  # third layer: line representing model predictions
+  geom_line(data = preds,
+            aes(x = x,
+                y = predicted),
+            inherit.aes = FALSE) +
+  # changing theme
+  theme_bw() +
+  # removing legend
+  theme(legend.position = "none",
+        panel.grid = element_blank()) +
+  # labeling x- & y-axes and adding title
+  labs(x = "Departure time",
+       y = "Walk time (minutes)",
+       title = "Negative relationship between walk time and departure time",
+       subtitle = "Most recent observation 2026-05-26") +
+  # changing colors based on location
+  scale_color_manual(values = c("Campbell" = "aquamarine3",
+                                "387" = "orange"))
+```
+
+
+**Figure 1. Median walk time is identical across locations.** Points represent individual daily walk times to two different locations, Building 387 (n = 11) and Campbell Hall (n = 15), on UCSB's campus from Isla Vista. Boxplots display median walk time value for each location along with interquartile range and total spread. Location groupings are seperated by color (387: orange, Campbell: aquamarine). Data collected by Luke Simon between the dates of 2026-04-20 and 2026-05-26.
+
+**Figure 2. Negative relationship between departure time and walk time.** Points represent individual daily walk times to two different locations, Building 387 (n = 11) and Campbell Hall (n = 15), on UCSB's campus from Isla Vista. Point shape represents if a stop was taken on the walk (triangle = TRUE, circle = FALSE), while point color represents location (387: orange, Campbell: aquamarine). Line represents linear model of departure time vs walk time. Ribbon represents 95% confidence interval from predictions. Data collected by Luke Simon between the dates of 2026-04-20 and 2026-05-26.
