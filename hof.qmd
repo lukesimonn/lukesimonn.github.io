@@ -15,6 +15,172 @@ Welcome to the Wikipedia Hall of Fame, a place where I will document some of my 
 
 # Map of the Hall
 
+```{r}
+#| echo: false
+
+library(leaflet)
+
+
+marine <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/NMMP_dolphin_with_locator.jpeg/500px-NMMP_dolphin_with_locator.jpeg' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Military_marine_mammal' target='_blank'>Visit Site</a>"
+)
+
+premiersea <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/LCFC_lift_the_Premier_League_Trophy_%2826943755296%29.jpg/500px-LCFC_lift_the_Premier_League_Trophy_%2826943755296%29.jpg' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/2015–16_Premier_League' target='_blank'>Visit Site</a>"
+)
+
+house <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/5LA_8757_house.jpg/500px-5LA_8757_house.jpg' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/House_music' target='_blank'>Visit Site</a>"
+)
+
+chernobyl <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/IAEA_02790015_%285613115146%29.jpg/960px-IAEA_02790015_%285613115146%29.jpg' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Chernobyl_disaster' target='_blank'>Visit Site</a>"
+)
+
+roses <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Beheading_duke_somerset.jpg/500px-Beheading_duke_somerset.jpg' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Wars_of_the_Roses' target='_blank'>Visit Site</a>"
+)
+
+marie <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Marie-Antoinette%2C_1775_-_Mus%C3%A9e_Antoine_L%C3%A9cuyer.jpg/500px-Marie-Antoinette%2C_1775_-_Mus%C3%A9e_Antoine_L%C3%A9cuyer.jpg' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Marie_Antoinette' target='_blank'>Visit Site</a>"
+)
+
+ice <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/2000_Year_Temperature_Comparison.png/960px-2000_Year_Temperature_Comparison.png' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Little_Ice_Age' target='_blank'>Visit Site</a>"
+)
+
+dead <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Grateful_Dead_%281970%29_%28high_quality%29.png/960px-Grateful_Dead_%281970%29_%28high_quality%29.png' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Grateful_Dead' target='_blank'>Visit Site</a>"
+)
+
+miracle <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/USA_-_Soviet_Union_1980_match.jpg/500px-USA_-_Soviet_Union_1980_match.jpg' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Miracle_on_Ice' target='_blank'>Visit Site</a>"
+)
+
+upset <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/2004_Detroit_Pistons_congratulated_by_George_Bush.jpg/500px-2004_Detroit_Pistons_congratulated_by_George_Bush.jpg' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Upset_(competition)' target='_blank'>Visit Site</a>"
+)
+
+number <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Sample_09-F9_protest_art%2C_Free_Speech_Flag_by_John_Marcotte.svg/500px-Sample_09-F9_protest_art%2C_Free_Speech_Flag_by_John_Marcotte.svg.png' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Illegal_number' target='_blank'>Visit Site</a>"
+)
+
+espionage <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Southampton_spy_at_Middlesbrough.webp/500px-Southampton_spy_at_Middlesbrough.webp.png' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Southampton_F.C._espionage_incident' target='_blank'>Visit Site</a>"
+)
+
+fairies <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/en/7/71/Cottingley_Fairies_1.jpg' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Cottingley_Fairies' target='_blank'>Visit Site</a>"
+)
+
+bus <- paste0(
+  "<img src='https://upload.wikimedia.org/wikipedia/en/4/4b/Dave_Matthews_Band_incident.jpg' width='200'/>",
+  "<br><a href='https://en.wikipedia.org/wiki/Dave_Matthews_Band_bus_incident' target='_blank'>Visit Site</a>"
+)
+
+
+leaflet() |>
+  addTiles() |>
+  addMarkers(
+    lat = 44.5800,
+    lng = 33.4023,
+    label = "Military marine mammal",
+    popup = marine
+  ) |> 
+  addMarkers(
+    lat = 52.62045084628276, 
+    lng = -1.142565012011219,
+    label = "2015-2016 Premier League season",
+    popup = premiersea
+  ) |> 
+  addMarkers(
+    lat = 41.89802,
+    lng = -87.63096,
+    label = "House music",
+    popup = house
+  ) |> 
+  addMarkers(
+    lat = 51.38937,
+    lng = 30.09792,
+    label = "Chernobyl disaster",
+    popup = chernobyl
+  ) |> 
+  addMarkers(
+    lat = 54.06994,
+    lng = -1.22450,
+    label = "Wars of the Roses",
+    popup = roses
+  ) |> 
+  addMarkers(
+    lat = 44.22423,
+    lng = 16.37482,
+    label = "Marie Antoinette",
+    popup = marie
+  ) |> 
+  addMarkers(
+    lat = 50.87980,
+    lng = -33.49414,
+    label = "Little ice age",
+    popup = ice
+  ) |> 
+  addMarkers(
+    lat = 37.43307,
+    lng = -122.13670,
+    label = "Grateful Dead",
+    popup = dead
+  ) |> 
+  addMarkers(
+    lat = 44.28030,
+    lng = -73.98434,
+    label = "Miracle on Ice",
+    popup = miracle
+  ) |> 
+  addMarkers(
+    lat = 38.20890,
+    lng = -99.48335,
+    label = "Upset (competition)",
+    popup = upset
+  ) |> 
+  addMarkers(
+    lat = 38.87100,
+    lng = -77.05581,
+    label = "Illegal number",
+    popup = number
+  ) |> 
+  addMarkers(
+    lat = 50.92604,
+    lng = -1.40976,
+    label = "Southampton F.C. espionage incident",
+    popup = espionage
+  ) |> 
+  addMarkers(
+    lat = 53.83084,
+    lng = -1.82232,
+    label = "Cottingley Fairies",
+    popup = fairies
+  ) |> 
+  addMarkers(
+    lat = 41.88909,
+    lng = -87.63981,
+    label = "Dave Matthews Band bus incident",
+    popup = bus
+  )
+  
+```
+
 # Complete List
 
 ## Folklore
