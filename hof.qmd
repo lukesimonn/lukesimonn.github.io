@@ -1,5 +1,62 @@
 ---
-title: "Wikipedia HOF"
+title: "Wikipedia Hall of Fame"
+execute:
+  message: false
+  warning: false
+  format:
+  html:
+    toc: true
+    toc-location: left
+editor_options: 
+  chunk_output_type: console
 ---
 
-I am a self-professed wikipiedia lover and in my time reading and editing the site I have come across some great pages for rabbithole deep dives. The Wikipedia Hall of Fame will look to highlight some of these lovely corners of the internet.
+Welcome to the Wikipedia Hall of Fame, a place where I will document some of my favorite Wikipedia rabbit holes and deep dives. Check out the map below if you want to blindly explore the articles (recommended), or scroll down to see the complete list with short explanations into why I chose each article. The Hall of Fame will be updated semi-regularly as I find more articles befitting of a place here.
+
+# Map of the Hall
+
+# Complete List
+
+## Folklore
+
+[Cottingley Fairies](https://en.wikipedia.org/wiki/Cottingley_Fairies) -- Fairies + hoaxes. Sign me up!
+
+## History
+
+[Marie Antoinette](https://en.wikipedia.org/wiki/Marie_Antoinette) -- Rich amount of information and side chains to go down.
+
+[Wars of The Roses](https://en.wikipedia.org/wiki/Wars_of_the_Roses) -- Long list of English throne dramas.
+
+## History/Science
+
+[Chernobyl disaster](https://en.wikipedia.org/wiki/Chernobyl_disaster) -- Great blend of science, background, and history.
+
+[Little Ice Age](https://en.wikipedia.org/wiki/Little_Ice_Age) -- I found this article by name alone, was not disappointed.
+
+## Math
+
+[Illegal number](https://en.wikipedia.org/wiki/Illegal_number) -- You read that right.
+
+## Music
+
+[Dave Matthews Band bus incident](https://en.wikipedia.org/wiki/Dave_Matthews_Band_bus_incident) -- Perhaps the best article title ever.
+
+[Grateful Dead](https://en.wikipedia.org/wiki/Grateful_Dead) -- So much to read about!
+
+[House music](https://en.wikipedia.org/wiki/House_music) -- House music was created by the queer Black community in Chicago, read about it here!
+
+## Military
+
+[Military marine animal](https://en.wikipedia.org/wiki/Military_marine_mammal) -- Again, you read that right.
+
+## Politics/Sports
+
+[Upset](https://en.wikipedia.org/wiki/Upset_(competition)) -- Perhaps the best collection of rabbit holes on Wikipedia
+
+## Sports
+
+[2015-2016 Premier League](https://en.wikipedia.org/wiki/2015–16_Premier_League) -- Put simply, 5000-1 odds, Jamie Vardy, and the greatest sports season of my life.
+
+[Southampton F.C. espionage incident](https://en.wikipedia.org/wiki/Southampton_F.C._espionage_incident) -- The most recent article on this list, incredible amounts of drama.
+
+[Miracle on Ice](https://en.wikipedia.org/wiki/Miracle_on_Ice) -- Another great sports upset.
