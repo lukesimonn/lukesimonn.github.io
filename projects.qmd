@@ -1,5 +1,9 @@
 ---
 title: "Projects"
+listing: 
+  contents: posts 
+  type: grid 
+  sort: "date desc" 
+  categories: true
 ---
 
-Sometime soon there will be a blog here about all the lovely research and projects I work on (Shout out Dirt Divas!!)

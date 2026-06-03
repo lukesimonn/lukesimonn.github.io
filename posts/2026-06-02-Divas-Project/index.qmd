@@ -1,0 +1,13 @@
+---
+title: "index"
+description: Poster discussing rock derived nutrients effect on leaf-level availability
+format: html
+author:
+  - name: Luke Simon
+    url: https://lukesimonn.github.io
+date: 2026-06-02
+image: divas.jpeg
+draft: false
+---
+
+![This was a poster created for the UCSB EEMB Undergraduate Research Symposium 2026. This research project was completed by the five UCSB undergrads, of which I was one, advised by EEMB graduate student Piper Lovegreen.](Poster.png)
