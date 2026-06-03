@@ -5,10 +5,7 @@ toc: TRUE
 
 ## Education and Background
 
-::: {layout="[60,40]" layout-valign="top"}
 I am currently an undergraduate at UCSB where I am pursuing two degrees. The first of which is a BS in Hydrologic Sciences and Policy and the second of which is a BA in English. I am hoping to complete my undergraduate time here at UCSB in the spring of 2028.
-:::
-
 
 ::: {layout="[40,60]" layout-valign="top"}
 ![Fieldwork at UC Sedgwick Reserve](images/field.jpeg){fig-align="left"}
