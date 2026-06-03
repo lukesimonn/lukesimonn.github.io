@@ -5,7 +5,7 @@ project:
 website:
   title: "Luke Simon"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - href: about.qmd
@@ -19,9 +19,10 @@ website:
 
 format:
   html:
-    theme:
-      - darkly
-    css: styles.css
+    theme: 
+        - styles.scss
+        - darkly
+    mainfont: Merriweather
     toc: true
 
 

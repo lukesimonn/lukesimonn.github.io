@@ -5,7 +5,7 @@ toc: false
 about:
   template: jolla
   image-shape: round
-  image-width: 16em
+  image-width: 18em
   links:
     - icon: github
       text: GitHub
