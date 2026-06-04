@@ -11,7 +11,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to the Wikipedia Hall of Fame, a place where I will document some of my favorite Wikipedia rabbit holes and deep dives. Check out the map below if you want to blindly explore the articles (recommended), or scroll down to see the complete list with short explanations into why I chose each article. The Hall of Fame will be updated semi-regularly as I find more articles befitting of a place here.
+Welcome to the Wikipedia Hall of Fame, a place where I will document some of my favorite Wikipedia rabbit holes and deep dives. Check out the map below if you want to blindly explore the articles (recommended), or scroll down to see the complete list with short explanations of why I chose each article. The Hall of Fame will be updated semi-regularly as I find more articles befitting of a place here.
 
 # Map of the Hall
 
