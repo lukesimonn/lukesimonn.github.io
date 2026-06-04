@@ -10,4 +10,4 @@ The associated markdown file for each page can be found using the page headers. 
 
 ## Rendered Output
 
-The finished website can be found [here](lukesimonn.github.io).
+The finished website can be found [here](https://lukesimonn.github.io).
